@@ -22,7 +22,7 @@
                 </section>
 
                 <!-- continue game section  -->
-                 <section id="continue_game" class="flex flex-col justify-center min-h-screen border items-center gap-5 hidden">  
+                 <section id="play_ground" class="flex flex-col justify-center min-h-screen border items-center gap-5 hidden">  
                         <!-- screen  -->
                         <div class="artboard artboard-horizontal phone-6 border-[15px] border-[#010313C8] rounded-2xl bg-[#FFFFFFBF]">
                             <div class="flex justify-center ">
@@ -74,21 +74,22 @@
                         <button class="btn">
                             Life
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                         <span>1</span>
+                         <span id="life-id">5</span>
                         </button>
                           <button class="btn">
                             Score
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                          <span>1</span>
+                          <span id="score-id">0</span>
                         </button>
                      </div>
                  </section>
 
                  <!-- score section  -->
-                  <section class="flex flex-col justify-center items-center min-h-screen hidden">
+                  <section id="game_over_score" class="flex flex-col justify-center items-center min-h-screen hidden">
                     <div class="flex flex-col justify-center items-center text-white card shadow-xl gap-5 p-10">
-                        <h1 class="text-4xl font-bold">Score: <span>14</span></h1>
-                        <button class="btn">Play Again</button>
+                        <h1 class="text-4xl font-bold">Game Over</h1>
+                        <h2 class="text-3xl font-bold">Score: <span id="score_result">14</span></h2>
+                        <button onclick="playAgain()" class="btn">Play Again</button>
                         <p>Practice will make you Pro</p>
                     </div>
                   </section>

@@ -67,6 +67,9 @@ function getKbdPressKey(event) {
 
   // expected key from display
   const currentAlphabet = currentDisplayAlphabet().innerText.toLowerCase();
+  if (kbdPressKey === "Escape") {
+    gameOVer();
+  }
 
   // condition check kbdPressKey VS currentAlphabet
   if (kbdPressKey === currentAlphabet) {
@@ -76,7 +79,6 @@ function getKbdPressKey(event) {
     setValueById("score-id", updateScore);
 
     continueGame(); // game continue looping
-   
   } else {
     // update life
     const updateLife = getTextElementByID("life-id") - 1;
@@ -84,7 +86,6 @@ function getKbdPressKey(event) {
 
     // check condition
     if (updateLife === 0) {
-      gameOVer();
     }
   }
 }
@@ -99,10 +100,10 @@ function playNow() {
 
 function gameOVer() {
   hiddenSection("play_ground");
-//   update final score 
-        const lastScore = getTextElementByID('score-id');
-        console.log(lastScore);
-   setValueById("score_result", lastScore);
+  //   update final score
+  const lastScore = getTextElementByID("score-id");
+  console.log(lastScore);
+  setValueById("score_result", lastScore);
   unHiddenSection("game_over_score");
 }
 

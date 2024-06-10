@@ -86,6 +86,7 @@ function getKbdPressKey(event) {
 
     // check condition
     if (updateLife === 0) {
+        gameOVer();
     }
   }
 }
